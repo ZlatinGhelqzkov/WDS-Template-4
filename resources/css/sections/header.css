@@ -1,0 +1,216 @@
+.header{
+    position: absolute;
+    max-width: 1160px;
+    margin:auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 20px 15px 0px 15px;
+}
+
+@media(min-width: 1200px){
+    .header{
+        padding: 20px 0px 0px 0px;
+    }
+}
+
+.header-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.nav-links-list{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.nav-link-wrapper{
+  position: absolute;
+  left: 0;
+  right: 0;
+  /*TOP position is set in burger-menu.js*/ 
+  /* ANIMATIN DELAY is set in burget-menu.js*/
+  margin-bottom: 50px;
+  transform:translateX(100%);
+}
+
+.opened .nav-link-wrapper{
+  animation: slideIn 0.2s forwards;
+}
+
+@keyframes slideIn{
+  from {
+    transform:translateX(100%);
+  }
+  to{
+    transform:translateX(0%);
+  }
+}
+
+
+.nav-link{
+    display: inline-block;
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+}
+
+
+
+/*##### START OF (MIN-WIDTH 1024PX) MEDIA #####
+###############################################
+###############################################*/
+
+@media(min-width: 1024px){
+
+  .nav-links-list{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    height: 100%;
+    border-bottom: 1px solid rgba(255,255,255,0.5);
+  }
+
+  .nav-link-wrapper{
+    position:relative;
+    margin: auto;
+    transform: none;
+    top:unset;
+    padding: 5px 17px;
+  }
+
+  .nav-link-wrapper:first-of-type{
+    padding-left: 0px;
+  }
+
+  .nav-link-wrapper:last-of-type{
+    padding-right: 0px;
+  }
+
+  .nav-link-wrapper:hover:after{
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left:0;
+    right:0;
+    width: 70%;
+    margin:auto;
+    height: 4px;
+    background: #fff;
+  }
+
+  .nav-link-wrapper:first-of-type:hover:after{
+      left:0;
+      right:17px;
+  }
+
+  .nav-link-wrapper:last-of-type:hover:after{
+      left:17px;
+      right:0px;
+  }
+}
+
+
+/*###### END OF 1024PX MEDIA ######
+###################################
+###################################*/
+
+
+
+/*BURGER MENU*/
+
+.burger-menu{
+  display: block;
+}
+
+@media(min-width: 1024px){
+  .burger-menu {
+    display: none;
+  }
+}
+
+  
+  .burger-top-line,
+  .burger-bottom-line {
+    display: block;
+    width: 30px;
+    height: 5px;
+    border-radius: 15px;
+    background: #fff;
+    z-index: 10;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .burger-top-line {
+    margin-bottom: 5px;
+  }
+  
+  .clicked {
+    z-index: 1010;
+  }
+  
+  .clicked .burger-top-line {
+    transform: translateY(100%) rotate(45deg);
+    transition: 0.2s ease-in-out;
+  }
+  
+  .clicked .burger-bottom-line {
+    transform: translateY(-100%) rotate(-45deg);
+    transition: 0.2s ease-in-out;
+  }
+
+  .nav{
+     top: -30px;
+      right: -15px;
+      left: -15px;
+      position: absolute;
+      transform: translateX(100%);
+      height: calc(100vh + 30px);
+      transition: 0.2s ease-in-out;
+  }
+  @media(min-width: 1024px){
+    .nav{
+      position:relative;
+      height: 100%;
+      top: unset;
+      right: unset;
+      left: unset;
+      transform:none;
+      transition: 0.2s ease-in-out;
+    }
+  }
+ 
+
+  .opened{
+    position: absolute;
+    top: -30px;
+    height: calc(100vh + 30px);
+    right: -15px;
+    left: -15px;
+    background: #000;
+    transform: translateX(0%);
+    z-index: 1000;
+    transition: 0.2s ease-in-out;
+  }
+
+ 
+  
+
+

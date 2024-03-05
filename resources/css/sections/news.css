@@ -1,0 +1,260 @@
+.news{
+    padding-bottom: 80px;
+}
+
+@media(min-width: 1024px){
+    .news{
+        margin-top: -80px;
+        padding-bottom: 200px;
+    }
+}
+
+.boxes{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 90px;
+}
+
+@media(min-width: 1200px){
+    .boxes{
+        gap: 30px;
+        justify-content: space-between;
+        margin-bottom: 145px;
+    }
+}
+.box{
+    position: relative;
+    width: 140px;
+    height: 140px;
+}
+
+@media(min-width: 1200px){
+    .box{
+        flex: 1;
+    }
+}
+
+.box-text{
+    position: absolute;
+    bottom: 15px;
+    left:0;
+    right: 0;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.box:after{
+    position: absolute;
+    content: "";
+    bottom: 38px;
+    left: 5px;
+    right: 5px;
+    height: 1px;
+    background: #fff;
+}
+
+.news-swiper{
+    margin-top: -70px;
+}
+
+.news-slide{
+    padding: 0px 15px 15px 15px;
+}
+@media((min-width: 768px) and (max-width: 1199px)){
+    .news-slide{
+        padding: 0px 30px 15px 30px;
+    }
+}
+
+
+
+@media(min-width: 1200px){
+    .news-swiper .swiper-wrapper{
+        padding: 30px;
+    }
+
+    .news-slide{
+        padding: 30px;
+    }
+}
+
+.post{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+@media(min-width: 1024px){
+    .post{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+}
+
+.news-next, .news-prev{
+    position: absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+    border-radius: 20px;
+    background-color: #ffb625;
+    z-index: 1000;
+}
+
+.news-prev{
+    position: absolute;
+    display: flex;
+    left: 0;
+    transform:translateX(-20%);
+}
+
+.news-next{
+    position: absolute;
+    display: flex;
+    right: 0;
+    transform:translateX(20%);
+}
+
+@media(min-width: 768px){
+    .news-prev, .news-next{
+        display: flex;
+    }
+
+    .news-prev{
+        transform:translateX(-50%);
+    }
+
+    .news-next{
+        transform:translateX(50%);
+    }
+}
+
+.news-next:after, .news-prev:after{
+    content: none;
+}
+
+
+/*############LEFT SIDE############*/
+
+
+.post-left{
+    width: 100%;
+    max-width: 600px;
+    filter: drop-shadow(5px 8.66px 27px rgba(0,0,0,0.16));
+    background-color: #ffffff;
+}
+
+@media(min-width: 1024px){
+    .post-left{
+        width: 50%;
+        margin-right: 45px;
+        max-width: unset;
+    }
+}
+
+.post-left-image-container{
+    position: relative;
+}
+
+.image-background{
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 110%;
+    height: 90%;
+    transform: translateX(-5%);
+    aspect-ratio: unset;
+}
+
+@media(min-width: 1024px){
+    .image-background{
+        display: block;
+    }
+}
+
+.post-info{
+    padding: 30px;
+    display: block;
+}
+
+
+.post-title{
+    display: inline-block;
+    font-size: 15px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.post-date{
+    font-size: 14px;
+    color: #888888;
+    font-weight: 400;
+    font-family: "Open Sans";
+    margin-bottom: 40px;
+}
+
+.post-link{
+    font-size: 14px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #7d623b;
+    font-weight: 700;
+}
+
+
+
+/*########### RIGHT SIDE############*/
+
+.post-right{
+    width: 100%;
+    display: none;
+}
+
+@media(min-width: 1024px){
+    .post-right{
+        display: block;
+        width: 50%;
+    }
+}
+
+.post-right p{
+    font-size: 16px;
+    max-width: 500px;
+    line-height: 24px;
+    color: #888888;
+    font-weight: 400;
+    font-family: "Open Sans";
+}
+
+.post-right p::first-letter {
+    font-size: 128px;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 900;
+    float: left;
+    line-height: 85px;
+  }

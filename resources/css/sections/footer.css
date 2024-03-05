@@ -1,0 +1,130 @@
+.footer{
+    position: relative;
+    background: url(/resources/images/backgrounds/footer-background.png);
+    background-size: cover;
+    background-position: left top;
+    background-repeat: no-repeat;
+    padding-top: 60px;
+}
+
+.footer:after{
+    content: "";
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #a49175;
+    opacity: 0.8;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.footer-inner-top{
+    margin-bottom: 60px;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 5;
+    color: #fff;
+    padding: 0px 15px;
+    gap: 20px;
+}
+
+@media(min-width: 1200px){
+    .footer-inner-top{
+        padding: 0;
+    }
+}
+
+@media((min-width: 576px) and (max-width: 1023px)){
+    .site-map, .benefits, .contacts{
+        flex: 0 0 calc(33.333% - 20px);
+    }
+    
+}
+
+.list-title-wrapper{
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.list-title{
+    display: block;
+    font-size: 15px;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 700;
+    white-space: nowrap;
+    margin-right: 10px;
+    flex: 1;
+}
+
+.title-line{
+    display: block;
+    height: 1px;
+    background: #fff;
+    flex: 2;
+}
+
+.footer-link{
+    display: inline-block;
+    font-size: 15px;
+    letter-spacing: 0px;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+
+
+.social-links-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 55px;
+  }
+  
+  .social-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    padding: 0px 5px 0px 5px;
+    background-color: transparent;
+  }
+  
+  .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #A99A87;
+    width: 43px;
+    height: 43px;
+    font-size: 16px;
+    background: #fff;
+    border-radius: 100%;
+    margin: 0px 5px 0px 5px;
+  }
+  
+  .footer-copyright {
+    position: relative;
+    z-index: 10;
+    background: transparent;
+    padding: 30px 0px 30px 0px;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    opacity: 1;
+  }

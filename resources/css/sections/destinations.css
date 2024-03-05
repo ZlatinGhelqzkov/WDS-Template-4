@@ -1,0 +1,91 @@
+.destinations{
+    margin-bottom: 90px;
+}
+
+@media(min-width: 1200px){
+    .destinations{
+        margin-bottom: 220px;
+    }
+}
+
+.destinations .section-title{
+    margin-bottom: 30px;
+}
+
+@media(min-width: 576px){
+    .destinations .section-title{
+        margin-bottom: 48px;
+    }
+}
+
+@media(min-width: 1200px){
+    .destinations .section-title{
+        margin-bottom: 110px;
+    }
+}
+
+.destinations-image{
+    margin-bottom: 50px;
+    filter: drop-shadow(5px 8.66px 27px rgba(0,0,0,0.16));
+}
+
+.drop-downs{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.location-drop-down, .services-drop-down{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+@media(min-width: 1024px){
+    .drop-downs{
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .location-drop-down, .services-drop-down{
+        align-items: flex-start;
+        margin-right: 40px;
+        margin-bottom: 0px;
+    }
+}
+
+
+.location-drop-down select, .services-drop-down select{
+    min-width: 220px;
+    padding: 10px 0px;
+    background: none;
+    border:none;
+    border-radius: none;
+    border-bottom: 2px solid #000;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #000000;
+    font-weight: 700;
+font-family: "Roboto";
+}
+
+.location-drop-down label, .services-drop-down label{
+    font-size: 14px;
+    color: #000000;
+    font-family: "Open Sans";
+}
+
+.drop-downs-button{
+    font-size: 14px;
+    padding: 10px;
+    padding-bottom: 0px;
+    text-transform: uppercase;
+    color: #7d623b;
+    font-weight: 700;
+    font-family: "Roboto";
+    border: none;
+    background:transparent;
+    cursor: pointer;
+}
