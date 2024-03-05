@@ -1,6 +1,6 @@
 .footer{
     position: relative;
-    background: url(/resources/images/backgrounds/footer-background.png);
+    background: url(../../images/backgrounds/footer-background.png);
     background-size: cover;
     background-position: left top;
     background-repeat: no-repeat;

@@ -40,7 +40,8 @@
   left: 0;
   right: 0;
   /*TOP position is set in burger-menu.js*/ 
-  /* ANIMATIN DELAY is set in burget-menu.js*/
+
+  /* ANIMATION DELAY is set in burget-menu.js*/
   margin-bottom: 50px;
   transform:translateX(100%);
 }
